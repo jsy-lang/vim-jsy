@@ -12,11 +12,17 @@ Please see [JSY language docs](https://github.com/jsy-lang/jsy-lang-docs) for de
 
 ## Installation
 
+### Install with [vundle](https://github.com/VundleVim/Vundle.vim)
+
+```vim
+Plugin 'jsy-lang/vim-jsy'
+```
+
 ### Install with [pathogen](https://github.com/tpope/vim-pathogen)
 
-      git clone https://github.com/jsy-lang/vim-jsy.git ~/.vim/bundle/vim-jsy
-
-alternatively, use a package manager like [vim-plug](https://github.com/junegunn/vim-plug)
+```bash
+git clone https://github.com/jsy-lang/vim-jsy.git ~/.vim/bundle/vim-jsy
+```
 
 
 ## License
