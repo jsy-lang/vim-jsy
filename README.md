@@ -27,4 +27,6 @@ git clone https://github.com/jsy-lang/vim-jsy.git ~/.vim/bundle/vim-jsy
 
 ## License
 
+Base javascript syntax from [jelera/vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax/blob/f054138292452ad14fb3bb9dcde3d6224a35a443/syntax/javascript.vim)
+
 Distributed under the same terms as Vim itself. See `:help license`.
