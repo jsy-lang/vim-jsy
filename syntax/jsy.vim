@@ -24,11 +24,13 @@ syn match jsyAtArrowOperator "@=>\|@=>>"
 syn match jsyAtOperator "@{}\|@:\|@\[\]\|@#\|@()\|@"
 syn match jsyDblColOperator "::()\|::{}\|::\[\]\|::"
 
+syn region jsyPreProc start="^\s*#\s*\w\+" skip="\\$" end="$" keepend
 
 " options: Special Function Operator
 hi def link jsyAtOperator          Special
 hi def link jsyAtArrowOperator     Special
 hi def link jsyDblColOperator      Special
+hi def link jsyPreProc             PreProc
 
 
 let b:current_syntax = "jsy"
