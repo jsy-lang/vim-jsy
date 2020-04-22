@@ -20,16 +20,19 @@ endif
 let s:cpo_save = &cpo
 set cpo&vim
 
-syn match jsyAtArrowOperator "@=>\|@=>>"
-syn match jsyAtOperator "@{}\|@:\|@\[\]\|@#\|@()\|@"
-syn match jsyDblColOperator "::()\|::{}\|::\[\]\|::"
-
+syn match jsyAtArrowOperator "\(@=>\|@::\|@\\\)[^\r\n\t a-zA-Z0-9_]*"
+syn match jsyAtIIFEOperator "\(@!\|@\*\|::!\)[^\r\n\t a-zA-Z0-9_]*"
+syn match jsyAtOperator "@[^a-zA-Z0-9_ \t]*"
+syn match jsyDblColOperator "::[^a-zA-Z0-9_ \t]*"
+syn match jsyFoldOperator ";[-@+*\/%^<>&|!?=,.:]\+"
 syn region jsyPreProc start="^\s*#\s*\w\+" skip="\\$" end="$" keepend
 
 " options: Special Function Operator
-hi def link jsyAtOperator          Special
 hi def link jsyAtArrowOperator     Special
+hi def link jsyAtIIFEOperator      Special
+hi def link jsyAtOperator          Special
 hi def link jsyDblColOperator      Special
+hi def link jsyFoldOperator        Special
 hi def link jsyPreProc             PreProc
 
 
